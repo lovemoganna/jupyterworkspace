@@ -30,6 +30,11 @@ def get_fremont_data(filename="fremonts.csv",url=FREMONT_URL,force_download=Fals
         urlretrieve(url,filename)
         
     data = pd.read_csv(filename,index_col='Date',parse_dates=True)
+    try:
+        data.index = pd.to_datetime(data.index,format='%m%d%Y %I:%M:%S %p')
+    except:
+        data.index = pd.to_datetime(data.index)
+        
     data.columns =['West','East']
     data['Total'] = data['West']+data['East']
     return data

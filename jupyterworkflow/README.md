@@ -1,7 +1,7 @@
 ## create python package 
 
 - create floader: 'mkdir jupyterworkflow'
-- enter floader: 'echo "hi" > _init__.py '
+- enter floader: 'echo "hi" > __init__.py '
 - change the '__init__.py',insert 'x = 5.76'
 - enter to 'ipython'int the terminal console
 - 'import jupyterworkflow' & 'jupyterworkflow.x' and show '5.76',just follow,you will fell  
